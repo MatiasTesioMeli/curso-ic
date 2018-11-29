@@ -1,3 +1,3 @@
-#/bin/bash
+#!/bin/bash
 
 ./gradlew -DapiName=curso-ic buildImage

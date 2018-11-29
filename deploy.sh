@@ -1,5 +1,5 @@
-#/bin/bash
+#!/bin/bash
 
 docker stop curso
 docker rm curso
-docker run --name curso -e JAVA_OPTS="-Dspring.profiles.active=ic" -p 8080:8080 -d curso-ic:0.0.1-SNAPSHOT
+docker run --name curso -e JAVA_OPTS="-Dspring.profiles.active=ic" --link sql-server:sql-server -p 8090:8080 -d curso-ic:0.0.1-SNAPSHOT
